@@ -2,7 +2,7 @@ libros = []
 noKey = []
 solucion = [:]
 
-def wick(libro,solucion) {
+def WICK(libro,solucion) {
     libro = libro.toLowerCase()
     array = libro.split()
     for (i = 0; i < array.length; i++) {
@@ -15,7 +15,7 @@ def wick(libro,solucion) {
                 pa += it + " "
             }
             if(array[i] in solucion.keySet()){
-                solucion.put(array[i]+"${solucion.size()*2}",pa.substring(0, pa.length() - 1))
+                solucion.put(array[i]+"${solucion.size()*4}",pa.substring(0, pa.length() - 1))
             }else{
                 solucion.put(array[i],pa.substring(0, pa.length() - 1))
             }
@@ -39,22 +39,24 @@ read = [
         "Programming in Prolog",
         "Functional programming using Caml Light",
 ]
-
-for (i in read){
-    if(read.indexOf(i)<read.indexOf("::")){
-        noKey.add(i)
-    }
-    if(read.indexOf(i)>read.indexOf("::")){
-        libros.add(i)
+def readLi(read){
+    for (i in read){
+        if(read.indexOf(i)<read.indexOf("::")){
+            noKey.add(i)
+        }
+        if(read.indexOf(i)>read.indexOf("::")){
+            libros.add(i)
+        }
     }
 }
+readLi(read)
 libros.each {
 
-    wick(it,solucion)
+    WICK(it,solucion)
 }
 
 solucion = solucion.sort{it.key}
 //println(solucion.keySet())
 solucion.each {
-    println it.value
+    println it
 }
