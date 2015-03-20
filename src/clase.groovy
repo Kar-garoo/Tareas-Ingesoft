@@ -6,9 +6,9 @@ println pali(["Añora la Roña",
 
 */
 
-def tele = {n -> (1..n).collect{ (1..it).collect { x -> (1..x).collect{print x}}}}
+def tele = {n -> (1..n).collect{ (1..it).collect { x -> String s=((1..x).collect{x}).join(", ") } }}
 
-    s =  tele(4)
+    s = print tele(4)
 
 
 def clousu = {x,list -> list.each{it.call(x)}}
