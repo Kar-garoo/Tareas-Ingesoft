@@ -2,7 +2,7 @@ def palindromo = {list -> list.any{x -> x.toLowerCase().replaceAll(" ","") ==  x
 
 println palindromo(["Añora la Roña","casa","perro"])
 
-def telescopio = {n -> (1..n).collect{ (1..it).collect { x -> String s=((1..x).collect{x}).join(", ") }}}
+def telescopio = {n -> (1..n).collect{ ((1..it).collect { x -> String s=((1..x).collect{x}).join(" ,") })}}
 
 println telescopio(4)
 
