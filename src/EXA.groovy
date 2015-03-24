@@ -15,7 +15,6 @@ def EXA(numbers,value){
         }
     }
     println(operaciones)
-    l = []
     l = operaciones.keySet().asList()
     println(l.max())
     EXA(l,value)
