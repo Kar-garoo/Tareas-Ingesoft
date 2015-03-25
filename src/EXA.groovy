@@ -15,6 +15,7 @@ def EXA(numbers,value){
         }
     }
     println(operaciones)
+    l = []
     l = operaciones.keySet().asList()
     println(l.max())
     EXA(l,value)
@@ -25,7 +26,7 @@ println EXA([10, 5,25, 4, 78 ],291)
 def suma(a,b,value){
     if(a+b<=value) {
         map = [:]
-        map.put(a * b, "$a + $b")
+        map.put(a + b, "$a + $b")
         return map
     }
 }
