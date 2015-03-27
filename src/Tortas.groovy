@@ -1,4 +1,6 @@
-
+/**Kar-garoo
+*tortas
+ */
 
 def makeSwap = { a, i, j = i+1 -> a[j,i] = a[i,j]}
 
