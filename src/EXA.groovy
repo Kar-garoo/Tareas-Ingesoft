@@ -1,3 +1,7 @@
+/**Kar-garoo
+
+ */
+
 def EXA(numbers,value){
     operaciones = [:]
     println(numbers)
